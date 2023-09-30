@@ -5,7 +5,7 @@ from .models import Meal, Rating
 
 
 class MealAdmin(admin.ModelAdmin):
-    list_display = ["id", "title", "description"]
+    list_display = ["id", "title", "description", "no_of_rating", "avg_rating"]
     list_filter = ["title", "description"]
     search_fields = ["title", "description"]
 

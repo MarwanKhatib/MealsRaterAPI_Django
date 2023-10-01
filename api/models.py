@@ -32,9 +32,6 @@ class Rating(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     stars = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
-    # def __str__(self) -> str:
-    #     return self.meal.title
-
     class Meta:
         unique_together = (("user", "meal"),)
         index_together = (("user", "meal"),)

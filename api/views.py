@@ -62,7 +62,7 @@ class MealViewSet(viewsets.ModelViewSet):
                     }
                     return Response(JsonResponse, status=status.HTTP_201_CREATED)
         else:
-            JsonResponse = {"response": "Username Or Stars Not Provided"}
+            JsonResponse = {"response": "Stars Not Provided"}
             return Response(JsonResponse, status=status.HTTP_400_BAD_REQUEST)
 
 
